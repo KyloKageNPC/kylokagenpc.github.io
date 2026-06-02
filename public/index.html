@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ColdBunny - High-performance web and app design coupled with expert deployment. Designing the Web. Deploying the Future." />
+    <meta name="keywords" content="web design, app design, UI/UX, deployment, digital solutions" />
+    <meta name="author" content="ColdBunny" />
+    <meta property="og:title" content="ColdBunny | Designing the Web. Deploying the Future." />
+    <meta property="og:description" content="High-performance web and app design coupled with expert deployment." />
+    <meta property="og:type" content="website" />
+    
+    <title>ColdBunny | Designing the Web. Deploying the Future.</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#001f26",
+                        "primary-container": "#131b2e",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "primary": "#000000",
+                        "surface-dim": "#d8dadc",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#dae2fd",
+                        "on-tertiary-container": "#0090a9",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#d5e3fd",
+                        "background": "#f7f9fb",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-secondary-fixed": "#0d1c2f",
+                        "on-primary-container": "#7c839b",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "on-secondary-fixed-variant": "#3a485c",
+                        "surface-tint": "#565e74",
+                        "on-surface": "#191c1e",
+                        "primary-fixed-dim": "#bec6e0",
+                        "tertiary": "#000000",
+                        "on-primary-fixed": "#131b2e",
+                        "secondary": "#515f74",
+                        "outline-variant": "#c6c6cd",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface": "#f7f9fb",
+                        "outline": "#76777d",
+                        "secondary-fixed": "#d5e3fd",
+                        "surface-container": "#eceef0",
+                        "surface-container-high": "#e6e8ea",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-fixed": "#acedff",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "inverse-primary": "#bec6e0",
+                        "on-background": "#191c1e",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#b9c7e0",
+                        "on-secondary-container": "#57657b",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#45464d",
+                        "on-tertiary-fixed-variant": "#004e5c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "display": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}]
+                    },
+                    "animation": {
+                        "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+                    },
+                    "keyframes": {
+                        "fadeInUp": {
+                            "0%": { "opacity": "0", "transform": "translateY(30px)" },
+                            "100%": { "opacity": "1", "transform": "translateY(0)" }
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-body-md text-on-surface selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface/80 glass-effect border-b border-outline-variant">
+        <div class="flex items-center gap-4 max-w-container-max mx-auto w-full">
+            <div class="flex items-center gap-3">
+                <svg alt="ColdBunny Logo" class="h-10 w-10" fill="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect fill="#1E293B" height="100" rx="20" width="100"/>
+                    <path d="M30 30V70H50C61.0457 70 70 61.0457 70 50C70 38.9543 61.0457 30 50 30H30Z" stroke="#6366F1" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+                    <path d="M45 40L55 50L45 60" stroke="#06B6D4" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+                </svg>
+                <span class="font-headline-md text-headline-md font-bold text-primary hidden sm:inline">ColdBunny</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 ml-auto">
+                <a class="nav-link font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 transition-all" href="#work">WORK</a>
+                <a class="nav-link font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#services">SERVICES</a>
+                <a class="nav-link font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="pages/about.html">ABOUT</a>
+                <a class="nav-link font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#contact">CONTACT</a>
+            </div>
+            
+            <button class="md:hidden ml-auto" onclick="toggleMobileMenu()">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            
+            <button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps text-label-caps hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
+                Contact
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden px-margin-mobile md:px-margin-desktop py-32">
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <div class="absolute top-1/4 -left-1/4 w-[500px] h-[500px] bg-secondary-container rounded-full blur-[120px] opacity-30 animate-pulse"></div>
+                <div class="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-tertiary-fixed rounded-full blur-[120px] opacity-20 animate-pulse" style="animation-delay: 2s"></div>
+            </div>
+            <div class="relative z-10 max-w-4xl text-center">
+                <h1 class="font-display text-display mb-6 animate-fade-in-up">
+                    Designing the Web. <br/>
+                    <span class="text-secondary">Deploying the Future.</span>
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    High-performance web and app design coupled with expert deployment. We bridge the gap between creative vision and technical execution.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#work" class="bg-primary text-on-primary px-10 py-4 rounded-2xl font-label-caps text-label-caps shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 inline-block">
+                        View Work
+                    </a>
+                    <a href="#contact" class="border border-outline text-primary px-10 py-4 rounded-2xl font-label-caps text-label-caps hover:bg-surface-container-low transition-colors duration-300 inline-block">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32" id="services">
+            <div class="mb-16">
+                <span class="font-label-caps text-label-caps text-secondary mb-4 block">OUR EXPERTISE</span>
+                <h2 class="font-headline-lg text-headline-lg text-primary">Specialized Digital Solutions</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <!-- Web Design Card -->
+                <div class="service-card bg-white p-12 rounded-2xl border border-outline-variant custom-shadow hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-8">
+                        <span class="material-symbols-outlined text-primary">language</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-4">Web Design</h3>
+                    <p class="text-on-surface-variant font-body-md mb-8">Crafting responsive, high-converting websites with a focus on typography, white space, and architectural layouts.</p>
+                    <ul class="space-y-3 font-label-caps text-[10px] text-secondary">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> UI/UX STRATEGY</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> DESIGN SYSTEMS</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> INTERACTION DESIGN</li>
+                    </ul>
+                </div>
+
+                <!-- App Design Card -->
+                <div class="service-card bg-primary text-white p-12 rounded-2xl custom-shadow hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-on-primary-container rounded-lg flex items-center justify-center mb-8">
+                        <span class="material-symbols-outlined text-on-primary">smartphone</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-4">App Design</h3>
+                    <p class="text-primary-fixed-dim font-body-md mb-8">Building intuitive mobile experiences that solve complex user problems through elegant, functional interfaces.</p>
+                    <ul class="space-y-3 font-label-caps text-[10px] text-primary-fixed">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span> NATIVE iOS/ANDROID</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span> PROTOTYPING</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span> USER TESTING</li>
+                    </ul>
+                </div>
+
+                <!-- Deployment Card -->
+                <div class="service-card bg-white p-12 rounded-2xl border border-outline-variant custom-shadow hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-tertiary-fixed rounded-lg flex items-center justify-center mb-8">
+                        <span class="material-symbols-outlined text-tertiary-container">deployed_code</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-4">Seamless Deployment</h3>
+                    <p class="text-on-surface-variant font-body-md mb-8">End-to-end technical execution and deployment strategies to ensure your product scales flawlessly.</p>
+                    <ul class="space-y-3 font-label-caps text-[10px] text-secondary">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> CLOUD INFRASTRUCTURE</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> CI/CD PIPELINES</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> PERFORMANCE TUNING</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="bg-surface-container-low py-32" id="work">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                    <div>
+                        <span class="font-label-caps text-label-caps text-secondary mb-4 block">SELECTED WORK</span>
+                        <h2 class="font-headline-lg text-headline-lg text-primary">High-Impact Products</h2>
+                    </div>
+                    <a class="font-label-caps text-label-caps text-primary border-b border-primary hover:pb-1 transition-all" href="pages/portfolio.html">VIEW ALL PROJECTS →</a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Project Card 1 -->
+                    <a href="pages/project-fintech.html" class="group project-card cursor-pointer">
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-6 border border-outline-variant bg-surface">
+                            <img alt="Fintech App Redesign" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
+                                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=625&fit=crop" />
+                        </div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="font-label-caps text-[10px] bg-secondary-container px-2 py-1 rounded">MOBILE APP</span>
+                            <span class="font-label-caps text-[10px] bg-surface-container-high px-2 py-1 rounded">FINTECH</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">Fintech App Redesign</h3>
+                    </a>
+
+                    <!-- Project Card 2 -->
+                    <a href="pages/project-saas.html" class="group project-card cursor-pointer md:mt-12">
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-6 border border-outline-variant bg-surface">
+                            <img alt="Enterprise SaaS Platform" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
+                                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=625&fit=crop" />
+                        </div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="font-label-caps text-[10px] bg-secondary-container px-2 py-1 rounded">WEB PLATFORM</span>
+                            <span class="font-label-caps text-[10px] bg-surface-container-high px-2 py-1 rounded">ENTERPRISE</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">Enterprise SaaS Platform</h3>
+                    </a>
+
+                    <!-- Project Card 3 -->
+                    <a href="pages/project-ecommerce.html" class="group project-card cursor-pointer">
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-6 border border-outline-variant bg-surface">
+                            <img alt="E-commerce Experience" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
+                                src="https://images.unsplash.com/photo-1460925895917-adf4e7fb318b?w=500&h=625&fit=crop" />
+                        </div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="font-label-caps text-[10px] bg-secondary-container px-2 py-1 rounded">E-COMMERCE</span>
+                            <span class="font-label-caps text-[10px] bg-surface-container-high px-2 py-1 rounded">RETAIL</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">E-commerce Experience</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32" id="contact">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+                <div>
+                    <span class="font-label-caps text-label-caps text-secondary mb-4 block">GET IN TOUCH</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-8">Let's Build Something Together</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        Have a complex problem that needs a design-led solution? We're currently accepting new projects.
+                    </p>
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-6">
+                            <div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center">
+                                <span class="material-symbols-outlined text-secondary">mail</span>
+                            </div>
+                            <div>
+                                <p class="font-label-caps text-[10px] text-on-surface-variant">EMAIL US</p>
+                                <p class="font-headline-md text-[18px]">cchileshe17@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center">
+                                <span class="material-symbols-outlined text-secondary">location_on</span>
+                            </div>
+                            <div>
+                                <p class="font-label-caps text-[10px] text-on-surface-variant">LOCATION</p>
+                                <p class="font-headline-md text-[18px]">Libala • Lusaka, Zambia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="flex flex-col items-center md:items-start gap-2">
+                <span class="font-headline-md text-headline-md font-bold text-primary">ColdBunny</span>
+            <p class="font-label-caps text-[10px] text-on-surface-variant">© 2025 ColdBunny. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="flex gap-8">
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-all duration-300" href="https://www.linkedin.com/in/chileshechilesheit/" target="_blank">LinkedIn</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-all duration-300" href="https://github.com/KyloKageNPC" target="_blank">GitHub</a>
+
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-all duration-300" href="pages/resume.html">Resume</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

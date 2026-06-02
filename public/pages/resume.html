@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | ColdBunny</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #191c1e;
+            background: #f7f9fb;
+            padding: 40px 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 60px; border-radius: 16px; box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05); }
+        .header { margin-bottom: 40px; border-bottom: 2px solid #000; padding-bottom: 20px; }
+        h1 { font-size: 42px; font-weight: 700; margin-bottom: 8px; }
+        .subtitle { font-size: 14px; letter-spacing: 0.1em; color: #515f74; text-transform: uppercase; margin-bottom: 16px; }
+        .contact-info { display: flex; gap: 20px; font-size: 14px; }
+        .contact-info a { color: #000; text-decoration: none; }
+        h2 { font-size: 24px; font-weight: 600; margin-top: 32px; margin-bottom: 16px; color: #000; }
+        .section { margin-bottom: 32px; }
+        .experience-item { margin-bottom: 24px; }
+        .job-title { font-weight: 600; font-size: 16px; }
+        .company { font-size: 14px; color: #515f74; letter-spacing: 0.05em; }
+        .dates { font-size: 12px; color: #76777d; margin-top: 4px; }
+        .description { margin-top: 8px; color: #45464d; line-height: 1.6; }
+        ul { margin-left: 20px; margin-top: 8px; }
+        li { margin-bottom: 6px; color: #45464d; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 16px; }
+        .skill-category { background: #f2f4f6; padding: 12px; border-radius: 8px; }
+        .skill-category strong { display: block; font-size: 12px; letter-spacing: 0.1em; color: #515f74; margin-bottom: 8px; }
+        .skill-category p { font-size: 14px; color: #000; }
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; padding: 0; }
+            a { text-decoration: underline; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CHILESHE CHILESHE</h1>
+            <div class="subtitle">IT Developer & Full-Stack Developer</div>
+            <div class="contact-info">
+                <span>📱 0967 010 073</span>
+                <span>📧 <a href="mailto:cchileshe17@gmail.com">cchileshe17@gmail.com</a></span>
+                <span>📍 Chalala, Lusaka, Zambia</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Professional Summary</h2>
+            <p>Detail-oriented IT graduate with hands-on experience in full-stack development, technical support, and business technology consulting. Proven ability to troubleshoot complex systems, manage data operations, and implement technology solutions that drive organizational efficiency. Adept at bridging the gap between business needs and technical delivery, with a track record of supporting enterprise systems across frontend, backend, and infrastructure layers.</p>
+        </div>
+
+        <div class="section">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <div class="job-title">IT Developer & Consultant</div>
+                <div class="company">DanMari Nexus</div>
+                <div class="dates">Jul 2025 - Jan 2026</div>
+                <div class="description">
+                    <ul>
+                        <li>Delivered technical consulting services for business technology solutions, aligning IT strategy with organizational goals.</li>
+                        <li>Managed and maintained enterprise IT systems and databases, ensuring high availability and data integrity.</li>
+                        <li>Troubleshot complex issues across frontend and backend systems, reducing resolution time through systematic analysis.</li>
+                        <li>Conducted system analysis and recommended technology improvements to senior stakeholders.</li>
+                        <li>Coordinated cross-functional implementation of IT solutions in collaboration with business units.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Web Developer</div>
+                <div class="company">Visanest</div>
+                <div class="dates">Feb 2026 - Mar 2026</div>
+                <div class="description">
+                    <ul>
+                        <li>Designed and deployed Visanest website v1 and v2, delivering a responsive, production-ready web presence from brief to launch.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Technical Support Specialist</div>
+                <div class="company">Nuuvend POS</div>
+                <div class="dates">Mar 2025 - Jul 2025</div>
+                <div class="description">
+                    <ul>
+                        <li>Provided end-to-end technical support for POS system implementation, covering hardware, software, and user training.</li>
+                        <li>Troubleshot software and hardware issues in coordination with the development team, maintaining minimal system downtime.</li>
+                        <li>Authored and maintained system documentation, user guides, and technical manuals.</li>
+                        <li>Conducted QA testing for software updates and performed database management and backup procedures.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">IT Support Assistant</div>
+                <div class="company">Pick A Ride Zambia</div>
+                <div class="dates">Feb 2025 - Apr 2025</div>
+                <div class="description">
+                    <ul>
+                        <li>Managed office IT infrastructure, including computers, printers, and network connectivity.</li>
+                        <li>Performed data entry, backup procedures, database maintenance, and system access control.</li>
+                        <li>Supported system upgrades, software installations, and patch management for daily operations.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>IT Systems & Infrastructure</strong>
+                    <p>Network Administration, Windows/Linux Sysadmin, Hardware & Software Setup, Help Desk Support, System Testing & QA</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Development & Data</strong>
+                    <p>Django (Python), Flutter (Dart), HTML/CSS/JS, API Integration, Database Administration, Data Backup & Recovery</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Business & Productivity</strong>
+                    <p>Microsoft Office Suite, Business Information Systems, CRM Platforms, e-Commerce & Security Systems</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Core Competencies</strong>
+                    <p>Problem-solving, Analytical Thinking, Team Collaboration, Client Communication, Self-motivation, Time Management</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <div class="experience-item">
+                <div class="job-title">BSc Information Technology (With Credit)</div>
+                <div class="company">ZCAS University</div>
+                <div class="dates">Sep 2025</div>
+                <div class="description">
+                    Serial No: 001657<br/>
+                    Relevant coursework: Computer & Network Security · Systems Analysis & Design · Advanced Database Management · Network Technologies · IT Project Management · Mobile Application Development · Software Design & Architecture · Strategic Management of IT
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

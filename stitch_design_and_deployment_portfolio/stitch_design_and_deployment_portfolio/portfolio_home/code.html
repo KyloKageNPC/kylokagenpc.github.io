@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DESIGNER.EXE | Designing the Web. Deploying the Future.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#001f26",
+                        "primary-container": "#131b2e",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "primary": "#000000",
+                        "surface-dim": "#d8dadc",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#dae2fd",
+                        "on-tertiary-container": "#0090a9",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#d5e3fd",
+                        "background": "#f7f9fb",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-secondary-fixed": "#0d1c2f",
+                        "on-primary-container": "#7c839b",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "on-secondary-fixed-variant": "#3a485c",
+                        "surface-tint": "#565e74",
+                        "on-surface": "#191c1e",
+                        "primary-fixed-dim": "#bec6e0",
+                        "tertiary": "#000000",
+                        "on-primary-fixed": "#131b2e",
+                        "secondary": "#515f74",
+                        "outline-variant": "#c6c6cd",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface": "#f7f9fb",
+                        "outline": "#76777d",
+                        "secondary-fixed": "#d5e3fd",
+                        "surface-container": "#eceef0",
+                        "surface-container-high": "#e6e8ea",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-fixed": "#acedff",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "inverse-primary": "#bec6e0",
+                        "on-background": "#191c1e",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#b9c7e0",
+                        "on-secondary-container": "#57657b",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#45464d",
+                        "on-tertiary-fixed-variant": "#004e5c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "display": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        .custom-shadow {
+            box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05);
+        }
+        body {
+            background-color: #f7f9fb;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto bg-surface/80 backdrop-blur-md border-b border-outline-variant shadow-sm">
+<div class="flex items-center gap-4">
+<img alt="DESIGNER.EXE Logo" class="h-10 w-10 object-contain" src="data:image/png;base64,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"/>
+<span class="font-headline-md text-headline-md font-bold text-primary">DESIGNER.EXE</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 -translate-y-1 transition-all duration-200" href="#work">Work</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#services">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#expertise">Expertise</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#about">About</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps text-label-caps hover:bg-opacity-90 transition-all">
+            Contact
+        </button>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden px-margin-mobile md:px-margin-desktop py-32">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="absolute top-1/4 -left-1/4 w-[500px] h-[500px] bg-secondary-container rounded-full blur-[120px] opacity-30"></div>
+<div class="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-tertiary-fixed rounded-full blur-[120px] opacity-20"></div>
+</div>
+<div class="relative z-10 max-w-4xl text-center">
+<h1 class="font-display text-display mb-6 animate-fade-in-up">
+                    Designing the Web. <br/>
+<span class="text-secondary">Deploying the Future.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    High-performance web and app design coupled with expert FOW deployment. We bridge the gap between creative vision and technical execution.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-label-caps text-label-caps shadow-lg hover:-translate-y-1 transition-transform">
+                        View Work
+                    </button>
+<button class="border border-outline text-primary px-10 py-4 rounded-lg font-label-caps text-label-caps hover:bg-surface-container-low transition-colors">
+                        Get in Touch
+                    </button>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid Style) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32" id="services">
+<div class="mb-16">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">OUR EXPERTISE</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Specialized Digital Solutions</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Web Design -->
+<div class="bg-white p-12 rounded-xl border border-outline-variant custom-shadow hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary">language</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Web Design</h3>
+<p class="text-on-surface-variant font-body-md mb-8">Crafting responsive, high-converting websites with a focus on typography, white space, and architectural layouts.</p>
+<ul class="space-y-3 font-label-caps text-[10px] text-secondary">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> UI/UX STRATEGY</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> DESIGN SYSTEMS</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> INTERACTION DESIGN</li>
+</ul>
+</div>
+<!-- App Design -->
+<div class="bg-primary text-white p-12 rounded-xl custom-shadow hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 bg-on-primary-container rounded-lg flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-primary">smartphone</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">App Design</h3>
+<p class="text-primary-fixed-dim font-body-md mb-8">Building intuitive mobile experiences that solve complex user problems through elegant, functional interfaces.</p>
+<ul class="space-y-3 font-label-caps text-[10px] text-primary-fixed">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span> NATIVE iOS/ANDROID</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span> PROTOTYPING</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span> USER TESTING</li>
+</ul>
+</div>
+<!-- Seamless Deployment -->
+<div class="bg-white p-12 rounded-xl border border-outline-variant custom-shadow hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-lg flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-tertiary-container">deployed_code</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Seamless Deployment</h3>
+<p class="text-on-surface-variant font-body-md mb-8">End-to-end technical execution and FOW deployment strategies to ensure your product scales flawlessly.</p>
+<ul class="space-y-3 font-label-caps text-[10px] text-secondary">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> CLOUD INFRASTRUCTURE</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> CI/CD PIPELINES</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> PERFORMANCE TUNING</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Portfolio Preview Section -->
+<section class="bg-surface-container-low py-32" id="work">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">SELECTED WORK</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">High-Impact Products</h2>
+</div>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary hover:pb-1 transition-all" href="#">VIEW ALL PROJECTS</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Project 1 -->
+<div class="group project-card cursor-pointer">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-6 border border-outline-variant bg-surface">
+<img alt="Fintech App Redesign" class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="A high-end fintech mobile application interface shown on a sleek smartphone. The design features sophisticated dark mode aesthetics with electric cyan data visualizations and clean, modern typography. Soft ambient lighting illuminates the screen, highlighting the premium glass-like textures and precise alignment of the financial dashboards. The overall mood is secure, professional, and technologically superior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm-B7aroESO7HV8eyjacs9D_VqcANAmZGkUNA3ds46W4fHdyBqxFugpkgW2qbA8WvIW1JuoWq4JgH5kkd4nmkdJk5oMQwQEASCsGo3rtGNT70DQ_-Z5QkrDqAtgIoJcLBTCeJg4sp0Yst4ZWzNgsAMJgblCT8Hw1JajCvEic-NCcqdcJpcteQHWQapwhEEewwYh8T14dTfnGnktljPiQ1BxN3lAOVpzALfRHJGOm7u7gAco65JxCIHcUDH3PL1p5EZZVngiKXKf_f6"/>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="font-label-caps text-[10px] bg-secondary-container px-2 py-1 rounded">MOBILE APP</span>
+<span class="font-label-caps text-[10px] bg-surface-container-high px-2 py-1 rounded">FINTECH</span>
+</div>
+<h3 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">Fintech App Redesign</h3>
+</div>
+<!-- Project 2 -->
+<div class="group project-card cursor-pointer md:mt-12">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-6 border border-outline-variant bg-surface">
+<img alt="Enterprise SaaS Platform" class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="A detailed view of an enterprise SaaS platform dashboard displayed on a high-resolution monitor. The interface showcases a complex data architecture organized into a clean, minimalist bento grid layout. The color scheme is a professional light mode with slate blue accents and crisp black text. The lighting is bright and even, emphasizing the clarity and architectural precision of the digital workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKG89ZOU3zpVO3cgCTUbbWuZfUCDFxVnPf7eZc0KhKwbt0OKJJZO8PA7cWTrrucDn2yM6-8a6kucQUWGfbya_6Z-FwKgr4X1AOdOyv_0L2XcgPxV2Q9I3wHEKNURxKAyrAj3nHXKkqiCwcuPo-yJnAXQ2pwBmdvTHH5wjnsqRyC8H0IlfU-3H1P5WOJ6ZQgP1_dtyH3qAKu50vtpIFnP9mtPZEpPQIvIUwjCe6JldAcqnQifAa-87OAJyJOHm3lMHHA5x_oqfKE_Av"/>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="font-label-caps text-[10px] bg-secondary-container px-2 py-1 rounded">WEB PLATFORM</span>
+<span class="font-label-caps text-[10px] bg-surface-container-high px-2 py-1 rounded">ENTERPRISE</span>
+</div>
+<h3 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">Enterprise SaaS Platform</h3>
+</div>
+<!-- Project 3 -->
+<div class="group project-card cursor-pointer">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-6 border border-outline-variant bg-surface">
+<img alt="E-commerce Experience" class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="A minimalist e-commerce storefront for luxury products, featuring a typography-first approach and generous white space. The product photography is high-key and pristine, integrated seamlessly into a fluid, responsive web design. The visual style is modern and sophisticated, using slate blue for highlights and a refined palette that evokes a sense of premium craftsmanship and digital excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADFNKgGZsLdfIodEVIjiL0ujnPk_tIBsJ0y9O7w07VlTAQBwc1Nlvc0mil0DoCrZbXhnnWMq-iKOfD-ZXMi5Ae-CKI61z8z3czsFwbEYMVd3LL2QEtLfvvYUiCHPRW64pQYD1CUPxrr5dtnkiIJR-nsWaJ88eU1phgwN7ky9b-F8fqaQc6DbIu8Mdi26wuqW_emexRoXr3Qfpn8r319njiZh491cYZ2a6DaEBHTqI9sqjtVn0Qrlah2r_Q0eGEpdOf1jOEDJ1VZtwe"/>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="font-label-caps text-[10px] bg-secondary-container px-2 py-1 rounded">E-COMMERCE</span>
+<span class="font-label-caps text-[10px] bg-surface-container-high px-2 py-1 rounded">RETAIL</span>
+</div>
+<h3 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">E-commerce Experience</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32" id="contact">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+<div>
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">GET IN TOUCH</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Let's Build Something Together</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        Have a complex problem that needs a design-led solution? We're currently accepting new projects for Q4 2024.
+                    </p>
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">mail</span>
+</div>
+<div>
+<p class="font-label-caps text-[10px] text-on-surface-variant">EMAIL US</p>
+<p class="font-headline-md text-[18px]">hello@designer.exe</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+</div>
+<div>
+<p class="font-label-caps text-[10px] text-on-surface-variant">LOCATION</p>
+<p class="font-headline-md text-[18px]">Digital First • London, UK</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 md:p-16 rounded-xl border border-outline-variant custom-shadow">
+<form class="space-y-8" onsubmit="event.preventDefault(); alert('Message sent! (Demo only)');">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">FULL NAME</label>
+<input class="w-full px-0 py-3 border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all bg-transparent placeholder:text-outline/50" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">EMAIL ADDRESS</label>
+<input class="w-full px-0 py-3 border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all bg-transparent placeholder:text-outline/50" placeholder="john@company.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">MESSAGE</label>
+<textarea class="w-full px-0 py-3 border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all bg-transparent placeholder:text-outline/50" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 rounded-lg font-label-caps text-label-caps hover:shadow-xl transition-all flex items-center justify-center gap-3" type="submit">
+                            SEND MESSAGE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-margin-desktop px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-unit max-w-container-max mx-auto border-t border-outline-variant bg-surface-container-lowest">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-headline-md text-headline-md font-bold text-primary">DESIGNER.EXE</span>
+<p class="font-label-caps text-[10px] text-on-surface-variant">© 2024 DESIGNER.EXE. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-all" href="#">LinkedIn</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-all" href="#">GitHub</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-all" href="#">Dribbble</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-all" href="#">Resume</a>
+</div>
+</footer>
+<script>
+        // Simple scroll observer for animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, #services > div').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700', 'ease-out');
+            observer.observe(el);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
